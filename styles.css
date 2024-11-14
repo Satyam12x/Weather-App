@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f1f7f6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px; 
+    margin-bottom: 20px;
+    color: #4A90E2; 
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+#city-input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 70%;
+    transition: border-color 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #4A90E2; 
+    outline: none;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background-color: #FF6F61;
+    width: fit-content;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #FF5733; 
+}
+
+.error-message {
+    color: #FF4D4D; 
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.weather-info {
+    display: none;
+    margin-top: 30px;
+}
+
+.main-weather {
+    margin-bottom: 20px;
+}
+
+#city-name-heading,
+#country-heading {
+    color: #4A90E2; 
+    font-size: 24px;
+}
+
+#country-section {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.highlighted-text {
+    color: #333;
+    font-size: 24px;    
+    font-weight: 700;
+}
+
+#temperature {
+    font-size: 42px; 
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FF6F61; 
+}
+
+#weather-icon img {
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#weather-description {
+    font-size: 32px; 
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #555; 
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.parameter-box {
+    background-color: #f9f9f9; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.parameter-box:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
+}
+
+.parameter-box label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.parameter-box span {
+    display: block;
+    font-size: 18px;
+    color: #666; 
+    margin-top: 5px;
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #FF5733; 
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-height: 0;  
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.weather-details.expand {
+    max-height: 5000px; 
+    opacity: 1; 
+}
+
+.view-more-btn {
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #FF5733; 
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.6s ease-in-out;
+}
+
+.main-weather #satyam{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+@media (max-width: 600px){
+    .weather-details{
+        grid-template-columns: repeat(2,1fr)
+    }
+    .search-box{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link id="favicon" rel="icon" href="day-icon.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name" />
+            <button id="search-btn">See Weather</button>
+        </div>
+
+        <div id="weather-info" class="weather-info" style="display: none;">
+            <div class="main-weather">
+                <section id="satyam">
+                    <h2 id="city-name-heading">City Name : </h2>
+                    <h2 id="city-name" class="highlighted-text"></h2>
+                </section>
+                <section id="country-section">
+                    <h2 id="country-heading">Country: </h2>
+                    <h2 id="country-name" class="highlighted-text"></h2>
+                </section>
+
+                <div id="weather-icon">
+                    <img id="weather-icon-img" src="" alt="Weather Icon">
+                </div>
+                <div id="temperature">
+                    <span id="temp"></span> <span id="unit">°C</span>
+                </div>
+                <span id="weather-description"></span>
+            </div>
+
+            <div class="weather-details" id="weather-details">
+                <div class="parameter-box" id="feels-like-box">
+                    <label>Feels Like:</label>
+                    <span id="feels-like"></span>
+                </div>
+                <div class="parameter-box" id="humidity-box">
+                    <label>Humidity:</label>
+                    <span id="humidity"></span>
+                </div>
+                <div class="parameter-box" id="wind-speed-box">
+                    <label>Wind Speed:</label>
+                    <span id="wind-speed"></span>
+                </div>
+                <div class="parameter-box" id="pressure-box">
+                    <label>Pressure:</label>
+                    <span id="pressure"></span>
+                </div>
+                <div class="parameter-box" id="cloudiness-box">
+                    <label>Cloudiness:</label>
+                    <span id="cloudiness"></span>
+                </div>
+                <div class="parameter-box" id="visibility-box">
+                    <label>Visibility:</label>
+                    <span id="visibility"></span>
+                </div>
+                <div class="parameter-box" id="sunrise-box">
+                    <label>Sunrise:</label>
+                    <span id="sunrise"></span>
+                </div>
+                <div class="parameter-box" id="sunset-box">
+                    <label>Sunset:</label>
+                    <span id="sunset"></span>
+                </div>
+                <div class="parameter-box" id="timezone-box">
+                    <label>Timezone:</label>
+                    <span id="timezone"></span>
+                </div>
+                <div class="parameter-box" id="latitude-box">
+                    <label>Latitude:</label>
+                    <span id="latitude"></span>
+                </div>
+                <div class="parameter-box" id="longitude-box">
+                    <label>Longitude:</label>
+                    <span id="longitude"></span>
+                </div>
+            </div>
+
+            <button id="view-more-btn" class="view-more-btn">View More</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
